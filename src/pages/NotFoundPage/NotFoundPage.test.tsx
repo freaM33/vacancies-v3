@@ -14,7 +14,7 @@ describe('NotFoundPage', () => {
     expect(image.getAttribute('src')).toContain('vac.svg');
 
     const homeButton = screen.getByTestId('not-found-home-button');
-    expect(homeButton).toHaveAttribute('href', '/vacancies-v2/vacancies/moscow');
+    expect(homeButton).toHaveAttribute('href', '/v3/vacancies/moscow');
     expect(homeButton).toHaveAttribute('aria-label', 'На главную');
 
     expect(screen.queryByTestId('not-found-back-button')).not.toBeInTheDocument();

@@ -11,6 +11,18 @@ describe('App routing', () => {
     expect(screen.getByTestId('not-found-page')).toBeInTheDocument();
   });
 
+  it('показывает страницу «Обо мне» на маршруте /about', () => {
+    renderWithProviders(<App />, { initialEntries: ['/about'] });
+
+    expect(screen.getByTestId('about-page')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Дмитрий Кирчанов' })).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        'Привет! Я - Frontend-разработчик. Пишу приложения на React + TypeScript + Redux Toolkit.',
+      ),
+    ).toBeInTheDocument();
+  });
+
   it('показывает 404 для невалидного id вакансии', () => {
     renderWithProviders(<App />, { initialEntries: ['/not-a-number'] });
 

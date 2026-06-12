@@ -17,7 +17,7 @@ describe('VacancyCard', () => {
     expect(screen.getByText(vacancy.area.name)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Смотреть вакансию' })).toHaveAttribute(
       'href',
-      `/vacancies-v2/${vacancy.id}`,
+      `/v3/${vacancy.id}`,
     );
     expect(screen.getByRole('link', { name: 'Откликнуться' })).toBeInTheDocument();
   });

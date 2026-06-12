@@ -11,7 +11,7 @@ import './index.css';
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <MantineProvider theme={theme}>
-      <BrowserRouter basename="/vacancies-v2">
+      <BrowserRouter basename="/v3">
         <App />
       </BrowserRouter>
     </MantineProvider>

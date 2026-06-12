@@ -5,7 +5,7 @@ import { defineConfig } from 'vite';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/vacancies-v2/',
+  base: '/v3/',
   plugins: [react()],
   test: {
     globals: true,

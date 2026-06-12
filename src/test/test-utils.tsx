@@ -5,7 +5,7 @@ import { MemoryRouter } from 'react-router-dom';
 
 import { theme } from '../theme/theme';
 
-const BASENAME = '/vacancies-v2';
+const BASENAME = '/v3';
 
 interface CustomRenderOptions extends RenderOptions {
   initialEntries?: string[];
